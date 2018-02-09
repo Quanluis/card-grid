@@ -14,14 +14,30 @@ class App extends Component {
         src: 'https://via.placeholder.com/250x250',
         caption: "some other things and stuff",
         isLiked: false 
+      },
+      {
+        src: 'https://via.placeholder.com/250x250',
+        caption: "some other things and stuff",
+        isLiked: false 
+      },
+      {
+        src: 'https://via.placeholder.com/250x250',
+        caption: "some other things and stuff",
+        isLiked: false 
+      },
+      {
+        src: 'https://via.placeholder.com/250x250',
+        caption: "some other things and stuff",
+        isLiked: false 
       }]
+     
     }
 
   }
   render() {
     const {cards} = this.state;
     const CardGrid = cards.map((card, index) => <Card key = {index} src = {card.src}
-    caption = {card.caption} isLikes = {card.isliked}/>)
+    caption = {card.caption} isLiked = {card.isLiked}/>)
     return (
       <div className = 'container'>
         <h1>Card-Grid</h1>
