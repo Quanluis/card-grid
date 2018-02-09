@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './Card';
 
 
 class App extends Component {
@@ -18,13 +19,17 @@ class App extends Component {
 
   }
   render() {
-    console.log(this.state);
+    const {cards} = this.state;
+    const CardGrid = cards.map((card, index) => <Card key = {index} src = {card.src}
+    caption = {card.caption} isLikes = {card.isliked}/>)
     return (
       <div className = 'container'>
         <h1>Card-Grid</h1>
-
+        {/* iteration to make a bunch of cards */}
+        <div className="row">
+      { CardGrid }
+     </div>
       </div>
-    
     );
   }
 }
